@@ -1,0 +1,20 @@
+version: '3'
+services:
+  cdap:
+    image: 'caskdata/cdap-sandbox'
+    ports:
+      - '11011:11011'
+      - '11015:11015'
+      - '10443:10443'
+      - '9443:9443'
+      - '10009:10009'
+      - '10010:10010'
+    volumes:
+      - .:/mnt
+    working_dir: /mnt
+  shell:
+    image: 'maven:3-jdk-8'
+    volumes:
+      - .:/mnt
+    working_dir: /mnt
+    entrypoint: bash
