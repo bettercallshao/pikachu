@@ -14,6 +14,8 @@ services:
     working_dir: /mnt
   shell:
     image: 'maven:3-jdk-8'
+    ports:
+      - '8080:8080'
     volumes:
       - .:/mnt
     working_dir: /mnt

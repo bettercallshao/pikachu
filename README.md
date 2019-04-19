@@ -11,5 +11,5 @@ Playground to make CDAP plugins
 
 ## How to test java dev environment
 * `git clone https://github.com/data-integrations/example-transform`
-* `docker-compose run shell`
+* `docker-compose run --service-ports shell`
 * `mvn clean package`
